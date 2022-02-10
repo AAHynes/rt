@@ -12,12 +12,11 @@ const firebaseConfig = {
 
 
 
-
-firebase.initializeApp(firebaseConfig);
-
+const app = firebase.initializeApp(firebaseConfig);
 
 
-const myDB = firebase.database().ref("/contacts");
+
+const myDB1 = firebase.database().ref("/contacts");
 
 
 
@@ -44,59 +43,59 @@ button.addEventListener("click", insertRecord);
 
 function insertRecord() {
 
-alert("SUBMIT clicked!!!");
+  alert("SUBMIT clicked!!!");
 
-const email = document.getElementById("email");
+  const email = document.getElementById("email");
 
-const emailValue = email.value;
+  const emailValue = email.value;
 
-// alert(emailFieldValue);
+  // alert(emailFieldValue);
 
-// reset form
+  // reset form
 
-email.value = ""; // clear the field
+  email.value = ""; // clear the field
 
-email.focus(); // set the focus
+  email.focus(); // set the focus
 
-// code to save the data to Firebase GOES HERE!
+  // code to save the data to Firebase GOES HERE!
 
-const fN = document.getElementById("fName");
+  const fN = document.getElementById("fName");
 
-// sets the const fN to the value in fName input field
+  // sets the const fN to the value in fName input field
 
-const fNvalue = fN.value;
+  const fNvalue = fN.value;
 
-fN.value = "";
+  fN.value = "";
 
-fN.focus();
-  // resets the input field to empty
+  fN.focus();
+    // resets the input field to empty
 
-const sN = document.getElementById("sName");
+  const sN = document.getElementById("sName");
 
-const sNValue = sN.value;
+  const sNValue = sN.value;
 
-sN.value = "";
+  sN.value = "";
 
-sN.focus();
+  sN.focus();
 
-const age = document.getElementById("age");
+  const age = document.getElementById("age");
 
-const ageValue = age.value;
+  const ageValue = age.value;
 
-age.value = ""; // clear the field
+  age.value = ""; // clear the field
 
-age.focus();
+  age.focus();
 
-const dob = document.getElementById("dob");
+  const dob = document.getElementById("dob");
 
-const dobValue = dob.value;
+  const dobValue = dob.value;
 
-dob.value = "";
+  dob.value = "";
 
-dob.focus();
+  dob.focus();
 
-const data = myDB.push();
+  const data = myDB1.push();
 
-data.set({email: emailValue, fName:fNvalue, sName: sNValue, age: ageValue, dob: dobValue});
+  data.set({email: emailValue, fName:fNvalue, sName: sNValue, age: ageValue, dob: dobValue});
 
 }
