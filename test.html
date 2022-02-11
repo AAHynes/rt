@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
 <style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-.bg-image {
-  /* The image used */
-  background-image: url("https://cdn.glitch.global/339b2294-d82d-4fbb-b5e5-b809d6ed81f6/horizon.jpg?v=1644577494386");
-  
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-  
-  /* Full height */
-  height: 100%; 
-  
-  /* Center and scale the image nicely */
-  background-position: center;
+body {
+  background-image: url('https://cdn.glitch.global/339b2294-d82d-4fbb-b5e5-b809d6ed81f6/horizon.jpg?v=1644577494386');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 1400px 900px;
+  }
+  
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
-/* Position text in the middle of the page/image */
-.bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: black;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: lightblue;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
 }
 </style>
 </head>
 <body>
 
-<div class="bg-image"></div>
+<ul class="topnav">
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="products.html">Products</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  <li><a href="login.html">Login</a></li>
+  <li class="right"><a href="about.html">About</a></li>
+</ul>
 
-<div class="bg-text">
-  <h2>Blurred Background</h2>
-  <h1 style="font-size:50px">I am John Doe</h1>
-  <p>And I'm a Photographer</p>
+<div style="padding:0 16px;">
+  <h2>Contact Us</h2>
+  <p>This is the home page for the project I am doing.</p>
+  <p>I will be adding to the design side of this later.</p>
+  <h4>Blah Blah Blah.</h4>
 </div>
-
-</body>
-</html>
+  <
