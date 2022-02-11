@@ -9,52 +9,54 @@ body, html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
-  height: 50%;
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("https://cdn.glitch.global/339b2294-d82d-4fbb-b5e5-b809d6ed81f6/horizon.jpg?v=1644577494386");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
-.hero-text {
-  text-align: center;
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-}
-
-.hero-text button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
-  color: black;
-  background-color: #ddd;
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
   text-align: center;
-  cursor: pointer;
-}
-
-.hero-text button:hover {
-  background-color: #555;
-  color: white;
 }
 </style>
 </head>
 <body>
 
-<div class="horizon.jpg">
-  <div class="hero-text">
-    <h1 style="font-size:50px">I am John Doe</h1>
-    <p>And I'm a Photographer</p>
-    <button>Hire me</button>
-  </div>
-</div>
+<div class="bg-image"></div>
 
-<p>Page Content..</p>
+<div class="bg-text">
+  <h2>Blurred Background</h2>
+  <h1 style="font-size:50px">I am John Doe</h1>
+  <p>And I'm a Photographer</p>
+</div>
 
 </body>
 </html>
