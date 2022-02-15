@@ -41,67 +41,6 @@ ul.topnav li.right {float: right;}
   ul.topnav li.right, 
   ul.topnav li {float: none;}
 }
-  
-/* Style all input fields */
-input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-}
-
-/* Style the submit button */
-input[type=submit] {
-  background-color: black;
-  color: white;
-}
-  /* Style the container for inputs */
-.container {
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
-/* The message box is shown when the user clicks on the password field */
-#message {
-  display:none;
-  background: #f1f1f1;
-  color: #000;
-  position: relative;
-  padding: 20px;
-  margin-top: 10px;
-}
-
-#message p {
-  padding: 10px 35px;
-  font-size: 18px;
-}
-
-/* Add a green text color and a checkmark when the requirements are right */
-.valid {
-  color: green;
-}
-
-.valid:before {
-  position: relative;
-  left: -35px;
-  content: "✔";
-}
-
-/* Add a red text color and an "x" when the requirements are wrong */
-.invalid {
-  color: red;
-}
-
-.invalid:before {
-  position: relative;
-  left: -35px;
-  content: "✖";
-}
-  
-  
 </style>
 </head>
 <body>
@@ -115,29 +54,39 @@ input[type=submit] {
 </ul>
 
 <div style="padding:0 16px;">
- 
-  <h3>Password Validation</h3>
-<p>Try to submit the form.</p>
-
-<div class="container">
-  <form action="/action_page.php">
-    <label for="usrname">Username</label>
-    <input type="text" id="usrname" name="usrname" required>
-
-    <label for="psw">Password</label>
-    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-    
-    <input type="submit" value="Submit">
-  </form>
+  <h2>Contact Us</h2>
+  <p>This is the home page for the project I am doing.</p>
+  <p>I will be adding to the design side of this later.</p>
+  <h4>Blah Blah Blah.</h4>
 </div>
+  
+<input
 
-<div id="message">
-  <h3>Password must contain the following:</h3>
-  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-  <p id="number" class="invalid">A <b>number</b></p>
-  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-</div>
-</div>
+id="email"
+
+type="text"
+
+maxlength="100"
+
+placeholder="Type your email address here..."
+
+/>
+<input id = "fName" placeholder = "Enter first name" />
+  <br/>
+<input id = "sName" placeholder = "Enter Surname" />
+  <br/>
+<input id = "age" placeholder = "Enter Age" />
+  <br/>
+<input id = "dob" placeholder = "Enter Date Of Birth" />
+  <br/>
+<button type="submit" id="submit">Submit Data</button>
+  
+ <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+
+<script src="contact.js"></script>
+  
+
+</body>
+</html>
  
   
