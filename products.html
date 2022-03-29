@@ -63,11 +63,29 @@ h3 {
   
 p {
     text-align: center;
+    color: white;
   }
   
 h3 {
     text-align: center;
   }
+  
+  * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 </style>
 </head>
 <body>
@@ -82,6 +100,18 @@ h3 {
 
 <div style="padding:0 16px;">
   
+  <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/339b2294-d82d-4fbb-b5e5-b809d6ed81f6/IMG_4356.JPG?v=1648523821676" alt="Sender" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://cdn.glitch.global/339b2294-d82d-4fbb-b5e5-b809d6ed81f6/IMG_4324.JPG?v=1648517465806" alt="System" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://cdn.glitch.global/339b2294-d82d-4fbb-b5e5-b809d6ed81f6/reciever.JPG?v=1648517441273" alt="Reciever" style="width:100%">
+  </div>
+</div>
+
   
   <h2>Wind Sensor System</h2>
   <p>This automated system tells you whether or not to wear a jacket when you go outside, depending on whether or not the wind speed is over a certain speed.</p>
@@ -95,7 +125,7 @@ h3 {
   <p>
     The sender system is what reads the information. It takes the wind speed using its wind speed detector and sends it to the reciever.
   </p>
-  <br/>
+  
   
   <h3>
     Reciever System
